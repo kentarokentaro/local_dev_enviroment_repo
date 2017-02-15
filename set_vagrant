@@ -1,0 +1,37 @@
+VirtualBox - DownLoad
+http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-OSX.dmg
+
+Vagrant - DownLoad
+https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.dmg
+
+# Vagrant Set Command
+
+# vagrantの便利なプラグインを導入
+vagrant plugin install vagrant-vbguest
+
+# ホームディレクトリに移動
+cd
+
+# フォルダで管理する
+mkdir Vagrant
+
+# Vagrantに移動する
+cd Vagrant
+
+# 仮想マシンを作るフォルダを作る（CentOS）
+mkdir CentOS
+
+# CentOSに移動する
+cd CentOS
+
+# 仮想マシン設定用のVagrantfileを作る
+vagrant init bento/centos-6.8
+
+# Vagrantfileを編集して仮想マシンのIPアドレスを192.168.33.10にする
+sed -i '' -e 's/# config.vm.network "private_network", ip: "192.168.33.10"/config.vm.network "private_network", ip: "192.168.33.10"/' Vagrantfile
+
+# 仮想マシンを起動する
+vagrant up
+
+# 仮想マシンの状態を確認する
+vagrant status
