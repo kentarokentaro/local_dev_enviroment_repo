@@ -1,0 +1,12 @@
+Docker Push
+
+# Account Create
+https://hub.docker.com
+
+# login
+sudo docker login
+
+# push (image name be same accountname)
+sudo docker push kentarokentaro/httpd
+
+
