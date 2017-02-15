@@ -1,0 +1,37 @@
+Stand Server
+
+
+# make Dockerfirl
+vi Dockerfile
+
+'''sample
+FROM centos
+MAINTAINER Kentaro Kentaro
+
+#RUN :executed when build
+#RUN echo "now building..."
+
+#CMD :executed when run
+#CMD ["echo", "now running..."]
+
+RUN yum install -y httpd
+ADD ./index.html /var/www/html/
+EXPOSE 80
+CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+'''
+
+
+# make html
+vi index.html
+
+'''sample
+<html>
+Hello from Docker!
+</html>
+'''
+
+# create docker container
+sudo docker build -t kentaro/httpd .
+
+# ホスト側のポートの 8080 番を Container 側の 80 番にリダイレクトしたいので、「-p 8080:80」というオプションを付ける
+sudo docker run -p 8080:80
