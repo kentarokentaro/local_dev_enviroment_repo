@@ -1,2 +1,10 @@
 Make Image
-:wq
+
+# container login
+sudo docker run -i -t centos /bin/bash
+
+# make image
+sudo docker commit 043acc4a687f kentaro/hello
+
+# created image cofirmation
+sudo docker run -i -t kentaro/hello /bin/bas

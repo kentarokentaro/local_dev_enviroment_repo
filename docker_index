@@ -10,4 +10,4 @@ sudo docker images
 sudo docker inspect centos: latest
 
 # delete image
-sudo docker rmi d4350798c2ee
+sudo docker rm d4350798c2ee
