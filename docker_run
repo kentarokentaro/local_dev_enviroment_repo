@@ -1,0 +1,30 @@
+Docker run (make container and control container)
+
+# docker run
+sudo docker run centos:latest echo "hello"
+
+# container search
+sudo docker ps -a
+
+# delete container
+sudo docker rm 02ac52bad069
+
+# running container cofirmation
+// pre
+// バックグラウンドでメモリを３秒ごとに表示する
+sudo docker run -d centos free -s 3
+
+// 実行中のコンテイナーだけ見れる
+sudo docker -ps
+
+// 上記コマンドの実行内容が見える
+sudo docker logs dc2cbb591a95
+
+// フォアグランドにする
+sudo docker attach --sig-proxy=false dc2cbb591a95
+
+// kill
+sudo docker kill dc2cbb591a95
+
+// restart
+sudo docker start dc2cbb591a95
