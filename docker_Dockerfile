@@ -1,0 +1,21 @@
+Dockerfile
+
+
+# make file
+ vi Dockerfile
+
+'''sample
+FROM centos
+MAINTAINER Kentaro Kentaro
+
+#RUN :executed when build
+RUN echo "now building..."
+
+#CMD :executed when run
+CMD ["echo", "now running..."]
+'''
+# run
+sudo docker build -t kentaro/echo .
+
+# echo
+sudo docker run kentaro/echo
