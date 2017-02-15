@@ -1,0 +1,13 @@
+Docker Index
+
+# docker index pull
+sudo docker pull centos
+
+# confirmation
+sudo docker images
+
+# OS configuration
+sudo docker inspect centos: latest
+
+# delete image
+sudo docker rmi d4350798c2ee
