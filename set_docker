@@ -1,0 +1,30 @@
+Set Docker
+
+Docker - Download
+https://www.docker.com/products/docker#/mac
+
+# Ubuntu Set by Vagrant
+
+# OS Set
+vagrant box add trusty64 http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+mkdir Docker
+
+# Vagrant init
+vagrant init trusty64
+
+# Vagrant login
+vagrant ssh
+
+# set Docker
+
+# update packages
+sudo apt-get update
+
+# Install packages
+sudo apt-get install docker.io
+
+# Create a symbolic link
+sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+
+# Version confirmation
+sudo docker --version
